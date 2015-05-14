@@ -6,6 +6,8 @@ module Doing (
 ) where
 
 import Data.IntSet (empty, insert, member)
+import Data.List (genericTake)
+import System.Random
 
 doing :: Int -> [Int]
 doing x
@@ -22,3 +24,8 @@ cut (x:xs) = cut' (x:xs) [] empty
    | x `member` iSet = zs
    | otherwise = cut' xs (x:zs) (insert x iSet) 
 
+uniform :: Integer -> StdGen -> IO [Double]
+uniform n g = do
+	return $ genericTake n $ (randoms g :: [Double])
+	
+--newStdGen >>= uniform 100
