@@ -29,3 +29,6 @@ uniform n g = do
 	return $ genericTake n (randoms g :: [Double])
 	
 --newStdGen >>= uniform 100
+
+--Must implement Box-Muller transform a lˆ Alea.hs, to get normal randoms, chi-square & exponentials
+--Do something more interesting with this library, (maybe holistic random data generation?)
