@@ -14,3 +14,5 @@ cabal.sandbox.config
 *.aux
 *.hp
 .DS_Store
+
+__pycache__/
